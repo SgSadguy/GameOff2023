@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOFF_PRoject", "GameOFF_PRoject.csproj", "{BDDCE219-C275-489D-AC7C-3386283A4EEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDDCE219-C275-489D-AC7C-3386283A4EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDDCE219-C275-489D-AC7C-3386283A4EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDDCE219-C275-489D-AC7C-3386283A4EEC}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{BDDCE219-C275-489D-AC7C-3386283A4EEC}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{BDDCE219-C275-489D-AC7C-3386283A4EEC}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{BDDCE219-C275-489D-AC7C-3386283A4EEC}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

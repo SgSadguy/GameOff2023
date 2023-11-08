@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://nixt2iwj3tp5"]
+
+[ext_resource type="Script" path="res://SceneWorld/Player/PlayerScript/player.cs" id="1_2rwvt"]
+[ext_resource type="Texture2D" uid="uid://5b7beflf5krt" path="res://icon.svg" id="1_cqyf1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ln7bd"]
+radius = 81.0555
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_2rwvt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ln7bd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cqyf1")
