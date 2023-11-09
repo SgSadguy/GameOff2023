@@ -1,0 +1,4 @@
+res://SceneWorld/Player/Player.tscn
+res://SceneWorld/Player/PlayerScript/PlayerMovement.cs
+res://SceneWorld/Player/PlayerMovemnt.cs
+res://SceneWorld/Player/PlayerScript/PlayerMovemnt.cs
