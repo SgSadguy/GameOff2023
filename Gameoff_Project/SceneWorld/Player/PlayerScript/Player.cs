@@ -21,15 +21,8 @@ public partial class Player : CharacterBody2D
 
 		Velocity = velocity;
 		MoveAndSlide();
-	   PlayerHealth otherScript = GetNode<PlayerHealth>("res://SceneWorld/Player/PlayerScript/PlayerHealth.cs"); // Change the path accordingly
-
-		if (otherScript != null)
-		{
-			otherScript.TakeDamage(20);
-		}
-		else
-		{
-			GD.Print("OtherScript not found.");
-		}
+		
+		Playerhealth functionhealth = new Playerhealth();
+		functionhealth.TakeDamage(100);
 	}
 }

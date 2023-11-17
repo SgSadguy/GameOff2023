@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700218564
+::res://::1700221296
 icon.svg::CompressedTexture2D::2109674634782548317::1699443476::1699443645::1::::<><>::
 ::res://SceneWorld/::1699443476
-::res://SceneWorld/Player/::1700219244
-Player.tscn::PackedScene::930401841746339480::1700219244::0::1::::<><>::res://SceneWorld/Player/PlayerScript/BasicPlayer.cs<>uid://5b7beflf5krt::::res://icon.svg
-Player.cs::CSharpScript::-1::1700219394::0::1::::<><>::
-::res://SceneWorld/Player/PlayerScript/::1700219381
-PlayerHealth.cs::CSharpScript::-1::1700218959::0::1::::<><>::
+::res://SceneWorld/Player/::1700219915
+Player.tscn::PackedScene::930401841746339480::1700219915::0::1::::<><>::res://SceneWorld/Player/PlayerScript/Player.cs<>uid://5b7beflf5krt::::res://icon.svg
+::res://SceneWorld/Player/PlayerScript/::1700219825
+Player.cs::CSharpScript::-1::1700219825::0::1::::<><>::
+PlayerHealth.cs::CSharpScript::-1::1700219544::0::1::::<><>::

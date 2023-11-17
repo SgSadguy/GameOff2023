@@ -1,6 +1,3 @@
 res://SceneWorld/Player/Player.tscn
+res://SceneWorld/Player/PlayerScript/Playerhealth.cs
 res://SceneWorld/Player/PlayerScript/Player.cs
-res://SceneWorld/Player/PlayerScript/PlayerMovement.cs
-res://SceneWorld/Player/PlayerScript/player_movement.cs
-res://SceneWorld/Player/PlayerScript/PlayerHealth.cs
-res://SceneWorld/Player/PlayerScript/BasicPlayer.cs
