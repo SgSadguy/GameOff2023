@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://nixt2iwj3tp5"]
 
-[ext_resource type="Script" path="res://SceneWorld/Player/PlayerScript/PlayerMovemnt.cs" id="1_5c8pj"]
+[ext_resource type="Script" path="res://SceneWorld/Player/PlayerScript/Player.cs" id="1_yg0ci"]
 [ext_resource type="Texture2D" uid="uid://5b7beflf5krt" path="res://icon.svg" id="2_xsp5k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ln7bd"]
@@ -8,7 +8,7 @@ radius = 81.0555
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
-script = ExtResource("1_5c8pj")
+script = ExtResource("1_yg0ci")
 metadata/_edit_horizontal_guides_ = [-208.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -16,7 +16,3 @@ shape = SubResource("CircleShape2D_ln7bd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_xsp5k")
-
-[node name="DashTimer" type="Timer" parent="."]
-
-[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]

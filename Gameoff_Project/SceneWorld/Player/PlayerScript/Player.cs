@@ -1,14 +1,10 @@
 using Godot;
 using System;
 
-public partial class PlayerMovemnt : CharacterBody2D
+public partial class Player : CharacterBody2D
 {
 	public const float Speed = 300.0f;
-	public const float DashSpeed = 5000.0f;
-	public const bool CanDashSpeed = true;
-	
-	public override void _PhysicsProcess(double delta)
-	{
+	public override void _PhysicsProcess(double delta){
 		Vector2 velocity = Velocity;
 
 		// Get the input direction and handle the movement/deceleration.
@@ -23,19 +19,17 @@ public partial class PlayerMovemnt : CharacterBody2D
 			velocity.Y = Mathf.MoveToward(Velocity.Y, 0, Speed);
 		}
 
-		// Dash Function
-		if (Input.IsActionJustPressed("Dash")){
-			velocity.X = direction.X * DashSpeed;
-			velocity.Y = direction.Y * DashSpeed;
-		}
-
 		Velocity = velocity;
 		MoveAndSlide();
+	   PlayerHealth otherScript = GetNode<PlayerHealth>("res://SceneWorld/Player/PlayerScript/PlayerHealth.cs"); // Change the path accordingly
+
+		if (otherScript != null)
+		{
+			otherScript.TakeDamage(20);
+		}
+		else
+		{
+			GD.Print("OtherScript not found.");
+		}
 	}
 }
-
-
-
-
-
-
