@@ -1,3 +1,4 @@
 res://SceneWorld/Player/Player.tscn
-res://SceneWorld/Player/PlayerScript/Playerhealth.cs
 res://SceneWorld/Player/PlayerScript/Player.cs
+res://SceneWorld/Player/PlayerScript/Playerhealth.cs
+res://SceneWorld/Player/sword.tscn

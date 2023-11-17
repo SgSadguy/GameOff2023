@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://nixt2iwj3tp5"]
 
 [ext_resource type="Script" path="res://SceneWorld/Player/PlayerScript/Player.cs" id="1_yg0ci"]
-[ext_resource type="Texture2D" uid="uid://5b7beflf5krt" path="res://icon.svg" id="2_xsp5k"]
+[ext_resource type="Texture2D" uid="uid://vqrnxu2ptbbc" path="res://Art/Player/Player.png" id="2_wsikt"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ln7bd"]
-radius = 81.0555
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c4mvi"]
+radius = 50.0
+height = 156.0
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
@@ -12,7 +13,10 @@ script = ExtResource("1_yg0ci")
 metadata/_edit_horizontal_guides_ = [-208.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_ln7bd")
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_c4mvi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_xsp5k")
+position = Vector2(-29, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wsikt")
