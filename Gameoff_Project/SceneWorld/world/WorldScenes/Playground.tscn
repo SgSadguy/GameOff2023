@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4i1bs03pv8q4"]
+
+[ext_resource type="PackedScene" uid="uid://nixt2iwj3tp5" path="res://SceneWorld/Player/Player.tscn" id="1_t6j38"]
+[ext_resource type="PackedScene" uid="uid://0vsihnpewlc7" path="res://SceneWorld/world/WorldObjectScenes/trap.tscn" id="2_b1c4f"]
+
+[node name="Playground" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_t6j38")]
+position = Vector2(137, 169)
+
+[node name="trap" parent="." instance=ExtResource("2_b1c4f")]
+position = Vector2(393, 165)
