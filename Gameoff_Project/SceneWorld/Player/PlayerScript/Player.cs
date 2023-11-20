@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using HealthSystem_Player;
 
 public partial class Player : CharacterBody2D
 {
@@ -25,7 +26,6 @@ public partial class Player : CharacterBody2D
 		}
 		Velocity = velocity;
 		MoveAndSlide();
-		
 		//Playerhealth functionhealth = new Playerhealth();
 		//functionhealth.TakeDamage(100);
 	}

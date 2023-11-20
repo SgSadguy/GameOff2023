@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://SceneWorld/Player/PlayerScript/Player.cs" id="1_yg0ci"]
 [ext_resource type="Texture2D" uid="uid://vqrnxu2ptbbc" path="res://Art/Player/Player.png" id="2_wsikt"]
-[ext_resource type="PackedScene" uid="uid://dbjhqfm6lqrqy" path="res://SceneWorld/Player/Sword/sword.tscn" id="3_6qg4g"]
+[ext_resource type="PackedScene" uid="uid://dbjhqfm6lqrqy" path="res://SceneWorld/Player/Sword/Sword.tscn" id="3_6qg4g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c4mvi"]
 radius = 50.0
 height = 156.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_yg0ci")
 metadata/_edit_horizontal_guides_ = [-208.0]
