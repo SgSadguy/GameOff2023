@@ -15,8 +15,6 @@ public partial class Playerhealth : Resource
 			Die();
 		}
 	}
-
-	// This function is called when the player's health reaches zero
 	private void Die(){
 		GD.Print("Player has died!");
 	}

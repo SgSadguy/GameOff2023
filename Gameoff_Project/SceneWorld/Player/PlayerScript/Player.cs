@@ -4,6 +4,7 @@ using System;
 public partial class Player : CharacterBody2D
 {
 	public const float Speed = 300.0f;
+	public const float DashSpeed = 1000.0f;
 	public override void _PhysicsProcess(double delta){
 		Vector2 velocity = Velocity;
 
@@ -18,10 +19,14 @@ public partial class Player : CharacterBody2D
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
 			velocity.Y = Mathf.MoveToward(Velocity.Y, 0, Speed);
 		}
+		if (Input.IsActionPressed("Dash")){
+			velocity.X = direction.X * DashSpeed;
+			velocity.Y = direction.Y * DashSpeed;
+		}
 		Velocity = velocity;
 		MoveAndSlide();
 		
-		Playerhealth functionhealth = new Playerhealth();
-		functionhealth.TakeDamage(100);
+		//Playerhealth functionhealth = new Playerhealth();
+		//functionhealth.TakeDamage(100);
 	}
 }

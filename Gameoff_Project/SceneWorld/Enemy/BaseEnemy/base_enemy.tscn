@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1wfdbpxcg3qh"]
+
+[ext_resource type="Script" path="res://SceneWorld/Enemy/BaseEnemyScript/base_enemy.cs" id="1_t5ab8"]
+[ext_resource type="PackedScene" uid="uid://dr6lng6x70avs" path="res://SceneWorld/Enemy/BaseEnemy/hitbox.tscn" id="2_y8snx"]
+
+[node name="BaseEnemy" type="Node2D"]
+script = ExtResource("1_t5ab8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Hitbox" parent="." instance=ExtResource("2_y8snx")]

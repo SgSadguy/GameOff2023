@@ -1,12 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4i1bs03pv8q4"]
+[gd_scene load_steps=3 format=3 uid="uid://dykyn8pu64uas"]
 
-[ext_resource type="PackedScene" uid="uid://nixt2iwj3tp5" path="res://SceneWorld/Player/Player.tscn" id="1_t6j38"]
-[ext_resource type="PackedScene" uid="uid://0vsihnpewlc7" path="res://SceneWorld/world/WorldObjectScenes/trap.tscn" id="2_b1c4f"]
+[ext_resource type="PackedScene" uid="uid://nixt2iwj3tp5" path="res://SceneWorld/Player/Scene/Player.tscn" id="1_hh5xj"]
+[ext_resource type="PackedScene" uid="uid://c1wfdbpxcg3qh" path="res://SceneWorld/Enemy/BaseEnemy/base_enemy.tscn" id="2_kt4ot"]
 
 [node name="Playground" type="Node2D"]
+position = Vector2(470, 327)
 
-[node name="Player" parent="." instance=ExtResource("1_t6j38")]
-position = Vector2(137, 169)
+[node name="Player" parent="." instance=ExtResource("1_hh5xj")]
+position = Vector2(-60, 1)
 
-[node name="trap" parent="." instance=ExtResource("2_b1c4f")]
-position = Vector2(393, 165)
+[node name="BaseEnemy" parent="." instance=ExtResource("2_kt4ot")]
+position = Vector2(126, 0)
