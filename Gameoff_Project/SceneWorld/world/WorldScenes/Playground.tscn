@@ -4,10 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://c1wfdbpxcg3qh" path="res://SceneWorld/Enemy/BaseEnemy/base_enemy.tscn" id="2_kt4ot"]
 
 [node name="Playground" type="Node2D"]
-position = Vector2(470, 327)
 
 [node name="Player" parent="." instance=ExtResource("1_hh5xj")]
-position = Vector2(-60, 1)
+position = Vector2(499, 286)
 
 [node name="BaseEnemy" parent="." instance=ExtResource("2_kt4ot")]
-position = Vector2(126, 0)
+position = Vector2(830, 298)
