@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dykyn8pu64uas"]
+[gd_scene load_steps=4 format=3 uid="uid://dykyn8pu64uas"]
 
 [ext_resource type="PackedScene" uid="uid://nixt2iwj3tp5" path="res://SceneWorld/Player/Scene/Player.tscn" id="1_hh5xj"]
 [ext_resource type="PackedScene" uid="uid://c1wfdbpxcg3qh" path="res://SceneWorld/Enemy/BaseEnemy/base_enemy.tscn" id="2_kt4ot"]
+[ext_resource type="PackedScene" uid="uid://csiqqfrug6nxl" path="res://SceneWorld/world/WorldScenes/Trap.tscn" id="3_tqcxv"]
 
 [node name="Playground" type="Node2D"]
 
@@ -9,4 +10,7 @@
 position = Vector2(499, 286)
 
 [node name="BaseEnemy" parent="." instance=ExtResource("2_kt4ot")]
-position = Vector2(830, 298)
+position = Vector2(126, 0)
+
+[node name="SPoofyTrappy =)" parent="." instance=ExtResource("3_tqcxv")]
+position = Vector2(277, -36)

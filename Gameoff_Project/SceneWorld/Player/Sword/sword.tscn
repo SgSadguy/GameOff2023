@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dbjhqfm6lqrqy"]
 
-[ext_resource type="Texture2D" uid="uid://d4ne352uwe7a6" path="res://Art/Player/Sword.png" id="1_fyotw"]
-[ext_resource type="Script" path="res://SceneWorld/Player/Sword/Sword.cs" id="2_rl2rd"]
+[ext_resource type="Texture2D" uid="uid://d4ne352uwe7a6" path="res://Art/Player/Sword.png" id="1_gfgqj"]
+[ext_resource type="Script" path="res://SceneWorld/Player/Sword/Sword.cs" id="2_m3m3j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0qb3"]
 size = Vector2(24, 141)
@@ -75,7 +75,7 @@ script = ExtResource("2_rl2rd")
 position = Vector2(-1.90735e-06, -67)
 rotation = -0.349066
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_fyotw")
+texture = ExtResource("1_gfgqj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -74)
