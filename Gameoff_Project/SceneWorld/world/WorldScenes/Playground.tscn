@@ -7,10 +7,10 @@
 [node name="Playground" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_hh5xj")]
-position = Vector2(499, 286)
+position = Vector2(488, 294)
 
 [node name="BaseEnemy" parent="." instance=ExtResource("2_kt4ot")]
-position = Vector2(126, 0)
+position = Vector2(718, 291)
 
 [node name="SPoofyTrappy =)" parent="." instance=ExtResource("3_tqcxv")]
 position = Vector2(277, -36)

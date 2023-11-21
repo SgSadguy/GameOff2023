@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyfy348mnkuh4"
-path="res://.godot/imported/frist.png-d63478e289c646d0c07e194f7f64aad1.ctex"
+uid="uid://bvn47klrj33dt"
+path="res://.godot/imported/ghosts.png-4e28095642109ed192a64e3c846872f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Enemy/frist.png"
-dest_files=["res://.godot/imported/frist.png-d63478e289c646d0c07e194f7f64aad1.ctex"]
+source_file="res://Art/Enemy/ghosts.png"
+dest_files=["res://.godot/imported/ghosts.png-4e28095642109ed192a64e3c846872f4.ctex"]
 
 [params]
 

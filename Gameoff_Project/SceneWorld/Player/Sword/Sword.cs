@@ -11,7 +11,7 @@ public partial class Sword : CharacterBody2D
 		if (Input.IsActionJustPressed("Attack")){
 			var ap = GetNode("AnimationPlayer") as AnimationPlayer;
 			ap.Play("slash");
-			GD.Print("Slash");
+			//GD.Print("Slash");
 		}		
 	}
 }

@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://m63ulfi6ylfq"]
+
+[ext_resource type="Script" path="res://SceneWorld/Enemy/Castle/Ghost/ghost.cs" id="1_2k8cc"]
+[ext_resource type="Texture2D" uid="uid://bvn47klrj33dt" path="res://Art/Enemy/ghosts.png" id="1_wneij"]
+[ext_resource type="PackedScene" uid="uid://dr6lng6x70avs" path="res://SceneWorld/Enemy/BaseEnemy/hitbox.tscn" id="3_lppmt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h3gol"]
+radius = 39.0
+height = 100.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qdjbn"]
+radius = 48.0
+height = 120.0
+
+[node name="Ghost" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_2k8cc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_wneij")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(2, -4)
+shape = SubResource("CapsuleShape2D_h3gol")
+
+[node name="Hitbox" parent="." instance=ExtResource("3_lppmt")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(1, -2)
+shape = SubResource("CapsuleShape2D_qdjbn")

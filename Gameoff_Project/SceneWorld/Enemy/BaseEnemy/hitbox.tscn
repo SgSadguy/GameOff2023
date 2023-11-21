@@ -1,15 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr6lng6x70avs"]
+[gd_scene load_steps=2 format=3 uid="uid://dr6lng6x70avs"]
 
 [ext_resource type="Script" path="res://SceneWorld/Enemy/BaseEnemyScript/hitbox.cs" id="1_jxuwb"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y2lic"]
-radius = 55.0
-height = 140.0
-
 [node name="Hitbox" type="Area2D"]
 script = ExtResource("1_jxuwb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_y2lic")
 
 [connection signal="body_entered" from="." to="." method="OnBodyEntered"]
