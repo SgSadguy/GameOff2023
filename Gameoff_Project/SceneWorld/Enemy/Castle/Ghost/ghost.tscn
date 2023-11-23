@@ -9,7 +9,7 @@ radius = 39.0
 height = 100.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qdjbn"]
-radius = 48.0
+radius = 43.0
 height = 120.0
 
 [node name="Ghost" type="CharacterBody2D" groups=["enemy"]]
@@ -27,5 +27,4 @@ shape = SubResource("CapsuleShape2D_h3gol")
 [node name="Hitbox" parent="." instance=ExtResource("3_lppmt")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(1, -2)
 shape = SubResource("CapsuleShape2D_qdjbn")

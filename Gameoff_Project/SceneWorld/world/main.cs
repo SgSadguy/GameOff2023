@@ -3,15 +3,46 @@ using System;
 
 public partial class main : Node2D
 {
-	public override void _Ready()
-	{
+	public override void _Ready(){
+		//load Scene
+		PackedScene spawnplayer = GD.Load<PackedScene>("res://SceneWorld/world/Spawn/spawnplayer.tscn");
 		PackedScene room0 = GD.Load<PackedScene>("res://SceneWorld/world/Room/room_1.tscn");
-		Node2D room0Instance = (Node2D)room0.Instantiate();
-		AddChild(room0Instance);
 		PackedScene room1 = GD.Load<PackedScene>("res://SceneWorld/world/Room/room_2.tscn");
+		PackedScene room2 = GD.Load<PackedScene>("res://SceneWorld/world/Room/room_3.tscn");
+		//Keep it with Node2D
+		Node2D spawnplayerInstance = (Node2D)spawnplayer.Instantiate();
+		Node2D room0Instance = (Node2D)room0.Instantiate();
 		Node2D room1Instance = (Node2D)room1.Instantiate();
-		AddChild(room1Instance);
-		room1Instance.Position = new Vector2(room1Instance.Position.X + 1000, room1Instance.Position.Y);
+		Node2D room2Instance = (Node2D)room2.Instantiate();
+		Node2D[] roomInstances;
+		//Array Keep Room 
+		roomInstances = new Node2D[] { room0Instance, room1Instance ,room2Instance};
+		// AddChild(roomInstances[1]);
+		ShuffleArray(roomInstances);
+		//For loop to spawn room
+		for (int i = 0; i < roomInstances.Length ; i++) {
+		AddChild(roomInstances[i]);
+		AddChild(spawnplayerInstance);
+				if (i>0){
+					roomInstances[i].Position = new Vector2(roomInstances[i-1].Position.X + 1000, roomInstances[i-1].Position.Y);
+					spawnplayerInstance.Position = new Vector2(roomInstances[i-1].Position.X, roomInstances[i-1].Position.Y+100);
+				}
+		}
+		
+		//RemoveChild(roomInstances[1]);
 	}
+	static void ShuffleArray(Node2D[] array)
+	{
+		Random rng = new Random();
 
+		int n = array.Length;
+		while (n > 1)
+		{
+			n--;
+			int k = rng.Next(n + 1);
+			Node2D temp = array[k];
+			array[k] = array[n];
+			array[n] = temp;
+		}
+	}
 }
