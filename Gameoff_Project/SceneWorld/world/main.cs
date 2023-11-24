@@ -34,10 +34,8 @@ public partial class main : Node2D
 	static void ShuffleArray(Node2D[] array)
 	{
 		Random rng = new Random();
-
 		int n = array.Length;
-		while (n > 1)
-		{
+		while (n > 1){
 			n--;
 			int k = rng.Next(n + 1);
 			Node2D temp = array[k];
