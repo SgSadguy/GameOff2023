@@ -31,8 +31,7 @@ public partial class main : Node2D
 		
 		//RemoveChild(roomInstances[1]);
 	}
-	static void ShuffleArray(Node2D[] array)
-	{
+	static void ShuffleArray(Node2D[] array){
 		Random rng = new Random();
 		int n = array.Length;
 		while (n > 1){
@@ -40,7 +39,10 @@ public partial class main : Node2D
 			int k = rng.Next(n + 1);
 			Node2D temp = array[k];
 			array[k] = array[n];
-			array[n] = temp;
-		}
+			array[n] = temp;}}
+			
+	public void playerwarp(){
+		room functionwarp = new room();
+		functionwarp.checkwave();
 	}
 }
