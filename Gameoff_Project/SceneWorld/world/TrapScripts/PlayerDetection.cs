@@ -1,19 +1,21 @@
 using Godot;
 using System;
 
-public static class IS_FALLED
-{
-	public static bool fall = false;
-}
-
 public partial class PlayerDetection : Area2D
 {
+	private Godot.Collections.Dictionary<string, bool> _Object_STRCTURE = new Godot.Collections.Dictionary<string, bool>();
+	
+	public void _ready() {
+		_Object_STRCTURE["IS_FALLED"] = false;
+	}
+	
 	private void _on_body_entered(Node2D body)
 	{
-		if (IS_FALLED.fall == false) {
+		bool is_fall = (bool)_Object_STRCTURE["IS_FALLED"];
+		if (is_fall == false) {
 			var ap = GetNode($"../AnimationPlayer") as AnimationPlayer;
 			ap.Play("FallingintoYOU");
-			IS_FALLED.fall = true;
+			is_fall = true;
 			}
 	}
 }
