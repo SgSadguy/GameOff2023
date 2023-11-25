@@ -13,6 +13,7 @@ radius = 43.0
 height = 120.0
 
 [node name="Ghost" type="CharacterBody2D" groups=["enemy"]]
+z_index = 2
 script = ExtResource("1_2k8cc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
