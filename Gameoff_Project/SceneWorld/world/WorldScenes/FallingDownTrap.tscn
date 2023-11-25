@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://ddjcrro5x2nbb"]
+
+[ext_resource type="Script" path="res://SceneWorld/world/TrapScripts/FallingDownTrap.cs" id="1_5wb7b"]
+[ext_resource type="Texture2D" uid="uid://cggcbk67l75mh" path="res://Art/Misc/935235.png" id="2_pkvie"]
+[ext_resource type="Script" path="res://SceneWorld/world/TrapScripts/PlayerDetection.cs" id="3_x82a3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kpoow"]
+radius = 96.6902
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ssid7"]
+radius = 227.713
+
+[sub_resource type="Animation" id="Animation_b1bko"]
+resource_name = "FallingintoYOU"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4577),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-4, 4), Vector2(-4, 4), Vector2(-4, 350)]
+}
+
+[sub_resource type="Animation" id="Animation_yc1cp"]
+resource_name = "Reset"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:shape")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tea7l"]
+_data = {
+"FallingintoYOU": SubResource("Animation_b1bko"),
+"Reset": SubResource("Animation_yc1cp")
+}
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_5wb7b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 4)
+shape = SubResource("CircleShape2D_kpoow")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(2, -3)
+scale = Vector2(0.0851562, 0.13316)
+texture = ExtResource("2_pkvie")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+script = ExtResource("3_x82a3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(6, 229)
+shape = SubResource("CircleShape2D_ssid7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Reset"
+libraries = {
+"": SubResource("AnimationLibrary_tea7l")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="PlayerDetection" to="PlayerDetection" method="_on_body_entered"]
