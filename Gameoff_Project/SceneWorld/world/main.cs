@@ -5,12 +5,10 @@ public partial class main : Node2D
 {
 	public override void _Ready(){
 		//load Scene
-		PackedScene spawnplayer = GD.Load<PackedScene>("res://SceneWorld/world/Spawn/spawnplayer.tscn");
 		PackedScene room0 = GD.Load<PackedScene>("res://SceneWorld/world/Room/room_1.tscn");
 		PackedScene room1 = GD.Load<PackedScene>("res://SceneWorld/world/Room/room_2.tscn");
 		PackedScene room2 = GD.Load<PackedScene>("res://SceneWorld/world/Room/room_3.tscn");
 		//Keep it with Node2D
-		Node2D spawnplayerInstance = (Node2D)spawnplayer.Instantiate();
 		Node2D room0Instance = (Node2D)room0.Instantiate();
 		Node2D room1Instance = (Node2D)room1.Instantiate();
 		Node2D room2Instance = (Node2D)room2.Instantiate();
@@ -22,10 +20,8 @@ public partial class main : Node2D
 		//For loop to spawn room
 		for (int i = 0; i < roomInstances.Length ; i++) {
 		AddChild(roomInstances[i]);
-		AddChild(spawnplayerInstance);
 				if (i>0){
-					roomInstances[i].Position = new Vector2(roomInstances[i-1].Position.X + 1000, roomInstances[i-1].Position.Y);
-					spawnplayerInstance.Position = new Vector2(roomInstances[i-1].Position.X, roomInstances[i-1].Position.Y+100);
+					roomInstances[i].Position = new Vector2(roomInstances[i-1].Position.X + 3000, roomInstances[i-1].Position.Y);
 				}
 		}
 		
@@ -40,9 +36,4 @@ public partial class main : Node2D
 			Node2D temp = array[k];
 			array[k] = array[n];
 			array[n] = temp;}}
-			
-	public void playerwarp(){
-		room functionwarp = new room();
-		functionwarp.checkwave();
-	}
 }

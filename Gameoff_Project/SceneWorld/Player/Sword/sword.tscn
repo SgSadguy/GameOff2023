@@ -69,6 +69,7 @@ _data = {
 
 [node name="Sword" type="CharacterBody2D" groups=["sword"]]
 position = Vector2(402, 282)
+collision_layer = 3
 script = ExtResource("2_m3m3j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

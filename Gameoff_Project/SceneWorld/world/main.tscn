@@ -7,5 +7,7 @@
 script = ExtResource("1_g1roi")
 
 [node name="Player" parent="." instance=ExtResource("2_mgvdk")]
+position = Vector2(260, 440)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+visible = false
