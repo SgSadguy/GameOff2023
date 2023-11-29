@@ -1,15 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxpggg3bkegxe"]
 
-[ext_resource type="PackedScene" uid="uid://m63ulfi6ylfq" path="res://SceneWorld/Enemy/Castle/Ghost/ghost.tscn" id="1_j30op"]
-[ext_resource type="PackedScene" uid="uid://nixt2iwj3tp5" path="res://SceneWorld/Player/Scene/Player.tscn" id="2_qfxm3"]
+[ext_resource type="PackedScene" uid="uid://6eaqhg3vcxyd" path="res://SceneWorld/world/Room/room_1.tscn" id="2_6pqwr"]
+[ext_resource type="PackedScene" uid="uid://nixt2iwj3tp5" path="res://SceneWorld/Player/Player/Player.tscn" id="2_qfxm3"]
 
 [node name="PlaygroundFocus" type="Node2D"]
 
-[node name="Ghost" parent="." instance=ExtResource("1_j30op")]
-position = Vector2(609, 268)
-
-[node name="Ghost2" parent="." instance=ExtResource("1_j30op")]
-position = Vector2(870, 415)
-
 [node name="Player" parent="." instance=ExtResource("2_qfxm3")]
 position = Vector2(216, 298)
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+
+[node name="Room1" parent="." instance=ExtResource("2_6pqwr")]

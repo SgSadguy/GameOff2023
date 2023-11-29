@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dykyn8pu64uas"]
 
-[ext_resource type="PackedScene" uid="uid://nixt2iwj3tp5" path="res://SceneWorld/Player/Scene/Player.tscn" id="1_hh5xj"]
+[ext_resource type="PackedScene" uid="uid://nixt2iwj3tp5" path="res://SceneWorld/Player/Player/Player.tscn" id="1_hh5xj"]
 [ext_resource type="PackedScene" uid="uid://c1wfdbpxcg3qh" path="res://SceneWorld/Enemy/BaseEnemy/base_enemy.tscn" id="2_kt4ot"]
 [ext_resource type="PackedScene" uid="uid://csiqqfrug6nxl" path="res://SceneWorld/world/WorldScenes/Trap.tscn" id="3_tqcxv"]
 [ext_resource type="PackedScene" uid="uid://ddjcrro5x2nbb" path="res://SceneWorld/world/WorldScenes/FallingDownTrap.tscn" id="4_6koj8"]

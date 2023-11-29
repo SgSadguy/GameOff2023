@@ -3,6 +3,7 @@ using System;
 
 public static class CurrentPlayerHealth
 {
+	public static int Maxhealth = 100;
 	public static int health = 100;
 }
 

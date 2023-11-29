@@ -7,7 +7,8 @@ private void OnBodyEntered(Node2D body)
 {
 	if (body.IsInGroup("sword")){
 		if (Owner.HasMethod("TakeDamage")){
-			Owner.Call("TakeDamage",20);
+			var DamageValue =  Sword.DamageVariable;
+			Owner.Call("TakeDamage",DamageValue);
 		}
 	}
 }

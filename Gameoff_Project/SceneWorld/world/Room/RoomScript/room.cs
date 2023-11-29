@@ -2,8 +2,10 @@ using Godot;
 using System;
 
 public partial class room : Node2D{
-	public int clearwave = 0;
+	private int clearwaveunit = 0;
 	private RandomNumberGenerator rng;
+	public bool playerinroom = false;
+	public static int clearwave = 0;
 
 	// Declare a public integer variable for the random number
 	public int RandomInteger;
@@ -20,18 +22,11 @@ public partial class room : Node2D{
 		
 		SpawnEnemy(RandomInteger);
 	}
-		//Check Playerinroom
-		private void _on_check_playerin_map_body_entered(Node2D body){
-				if (body.IsInGroup("player")){
-					//GD.Print("Player in Room");
-				}}
 		//Check EnemyiSDEAD
 		private void _on_check_playerin_map_body_exited(Node2D body){
-			if (body.IsInGroup("enemy")){
-					//GD.Print("EnemyisDead");
-					clearwave += 1;
-					GD.Print(clearwave);
-				}}
+			if (body.IsInGroup("enemy") && playerinroom == true){
+					clearwaveunit += 1;
+					GD.Print("ClearWave Unit " + clearwaveunit);}}
 				
 		public void SpawnEnemy(int randomNumber){
 			var mk1 = GetNode("Marker1") as Marker2D;
@@ -48,11 +43,25 @@ public partial class room : Node2D{
 			GhostsInstance.Position = new Vector2(marker[i].Position.X+10*i,  marker[i].Position.Y);
 			}
 		}
-		public override void _Process(double delta){}
+		public override void _Process(double delta){
+			if(clearwaveunit >= RandomInteger){
+			var ap = GetNode("AnimationPlayer") as AnimationPlayer;
+			ap.Play("Dooropen");
+			}}
 		private void _on_warp_body_entered(Node2D body){
-			if(clearwave >= RandomInteger){
+			if(clearwaveunit >= RandomInteger){
 			if (body.IsInGroup("player")){
 					body.Position = new Vector2(body.Position.X+2000, body.Position.Y);
+					 clearwave += 1;
+					 main.score +=1;
+					GD.Print("Score"+ main.score);
 				}}
 		}
+
+		private void _on_check_playerin_map_body_entered(Node2D body){	
+				if (body.IsInGroup("player")){
+				GD.Print("Playerinroom");
+				playerinroom = true; }
+		
+			}
 }

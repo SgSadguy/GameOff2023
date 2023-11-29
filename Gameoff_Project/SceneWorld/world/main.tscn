@@ -1,13 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0ie3o8433e6n"]
 
-[ext_resource type="Script" path="res://SceneWorld/world/main.cs" id="1_g1roi"]
-[ext_resource type="PackedScene" uid="uid://nixt2iwj3tp5" path="res://SceneWorld/Player/Scene/Player.tscn" id="2_mgvdk"]
+[ext_resource type="Script" path="res://SceneWorld/world/main.cs" id="1_ha84o"]
+[ext_resource type="PackedScene" uid="uid://nixt2iwj3tp5" path="res://SceneWorld/Player/Player/Player.tscn" id="2_mgvdk"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_g1roi")
+script = ExtResource("1_ha84o")
 
 [node name="Player" parent="." instance=ExtResource("2_mgvdk")]
-position = Vector2(260, 440)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-visible = false
+position = Vector2(371, 320)
