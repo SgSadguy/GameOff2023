@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cxb5oq7giovxo"]
+[gd_scene load_steps=16 format=3 uid="uid://bgtsqcu4lnjlc"]
 
 [ext_resource type="Script" path="res://SceneWorld/world/Room/RoomScript/room.cs" id="1_moyhx"]
 [ext_resource type="Texture2D" uid="uid://d1sosyl28gbdw" path="res://Art/Map/map.jpg" id="2_b2h6k"]

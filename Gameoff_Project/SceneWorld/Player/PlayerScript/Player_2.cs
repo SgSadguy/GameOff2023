@@ -2,7 +2,7 @@ using Godot;
 using System;
 using HealthSystem_Player;
 
-public partial class Player : CharacterBody2D
+public partial class Player_2 : CharacterBody2D
 {
 	public const float Speed = 300.0f;
 	public const float DashSpeed = 1000.0f;
@@ -11,7 +11,7 @@ public partial class Player : CharacterBody2D
 
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 direction = Input.GetVector("LEFT_A", "RIGHT_A", "UP_A", "DOWN_A");
+		Vector2 direction = Input.GetVector("LEFT_B", "RIGHT_B", "UP_B", "DOWN_B");
 		if (direction != Vector2.Zero){
 			velocity.X = direction.X * Speed;
 			velocity.Y = direction.Y * Speed;
